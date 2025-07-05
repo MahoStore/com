@@ -6,9 +6,8 @@
   <title>Maho Store</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-  </style>
-  
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5NCZP20ZQZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -16,6 +15,221 @@
     gtag('js', new Date());
     gtag('config', 'G-5NCZP20ZQZ');
   </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    .hero-header {
+      background-image: url('banner.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      color: white;
+      padding: 60px 20px;
+      font-family: 'Playfair Display', serif;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .hero-header::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    .hero-title h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    .tagline {
+      margin-top: 5px;
+      font-size: 1.2em;
+      font-style: italic;
+      display: block;
+    }
+
+    nav {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: gold;
+      color: black;
+    }
+
+    .slideshow-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      margin-top: 20px;
+    }
+
+    .slide {
+      display: none;
+    }
+
+    .slide img {
+      width: 100%;
+      max-height: 60vh;
+      object-fit: cover;
+      display: block;
+      margin: auto;
+    }
+
+    .fade {
+      animation: fadeEffect 1.5s ease-in-out;
+    }
+
+    @keyframes fadeEffect {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+
+    section {
+      padding: 20px 60px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      border-bottom: 2px solid gold;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    #home p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: #2c2c2c;
+      font-weight: 500;
+    }
+
+    #home p em {
+      color: #b8860b;
+    }
+
+    .produk {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .produk-item {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 8px;
+      width: calc(50% - 20px);
+    }
+
+    .produk-item img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    @media(min-width: 768px) {
+      .produk-item {
+        width: calc(25% - 20px);
+      }
+    }
+
+    .bottom-links {
+      background-color: #eee;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 40px 60px;
+      font-size: 0.95em;
+    }
+
+    .bottom-links div {
+      margin-bottom: 20px;
+      min-width: 200px;
+    }
+
+    .bottom-links h4 {
+      margin-bottom: 10px;
+      border-bottom: 2px solid #000;
+      padding-bottom: 5px;
+    }
+
+    .bottom-links a {
+      color: #000;
+      text-decoration: none;
+      margin: 5px 0;
+      display: block;
+    }
+
+    .bottom-links a:hover {
+      text-decoration: underline;
+    }
+
+    .sosmed {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .sosmed a {
+      color: #000;
+      background-color: #fff;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .newsletter input[type=email] {
+      padding: 8px;
+      width: 180px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .newsletter button {
+      padding: 8px 16px;
+      background-color: #222;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      padding: 40px 0;
+    }
+  </style>
 </head>
 <body>
   <header class="hero-header">
@@ -29,6 +243,7 @@
     <div class="slide fade">
       <img src="slide1x.png" alt="Slide 1">
     </div>
+    <!-- Tambahkan slide lain jika perlu -->
   </div>
 
   <nav>
@@ -41,80 +256,44 @@
   <section id="home">
     <h2>Home</h2>
     <p>
-      Maho Store telah berkembang lebih dari sekadar toko pakaian. Mereka berfungsi sebagai tempat bagi pecinta streetwear, terutama di Indonesia, untuk memiliki dan menghargai produk asli.
+      Maho Store telah berkembang lebih dari sekadar toko pakaian. Mereka berfungsi sebagai tempat bagi pecinta streetwear untuk memiliki dan menghargai produk asli.
       Dengan selalu melakukan kurasi dan berkomitmen pada keaslian setiap produknya, Maho Store tidak hanya memastikan kepuasan pelanggan, tetapi juga mendidik konsumen tentang pentingnya memilih produk asli.
-      Dengan memilih untuk berbelanja di Maho Store dan mendukung inisiatif mereka, kita tidak hanya melindungi diri dari penipuan, tetapi juga menjadi bagian dari gerakan untuk mendukung budaya keaslian dalam fashion.
-      Kita dapat mengubah <em>"Fake is Crime"</em> menjadi sebuah moto yang menginspirasi untuk menghidupkan <em>"Original Must Become a Culture"</em> dalam setiap aspek kehidupan kita jika kita bekerja sama.
+      <em>"Fake is Crime"</em> menjadi moto untuk menghidupkan <em>"Original Must Become a Culture"</em>.
     </p>
-    <p class="hashtag"><strong>#FakeIsCrime!OriginalMustBecomeACulture</strong></p>
+    <p><strong>#FakeIsCrime #OriginalMustBecomeACulture</strong></p>
   </section>
 
   <section id="produk">
     <h2>Product</h2>
     <div class="produk">
+      <!-- Tambahkan produk-produk di sini seperti sebelumnya -->
       <div class="produk-item">
         <img src="baju1.png" alt="">
-        <h3>Noah Clothing Lion of Judah Rasta Sweatshirt Pink</h3>
+        <h3>Noah Clothing Lion of Judah</h3>
         <p>Rp.899.000</p>
       </div>
-      <div class="produk-item">
-        <img src="tas2.png" alt="">
-        <h3>Carhartt Legacy Deluxe Work pack - Black</h3>
-        <p>Rp.1.050.000</p>
-      </div>
-      <div class="produk-item">
-        <img src="baju3.png" alt="">
-        <h3>Wacko Maria Guilty Parties Heavyweight Crewneck - White</h3>
-        <p>Rp.1.100.000</p>
-      </div>
-      <div class="produk-item">
-        <img src="tas4.png" alt="">
-        <h3>Carhartt D89 Messenger Bag Black</h3>
-        <p>Rp.700.000</p>
-      </div>
-      <div class="produk-item">
-        <img src="baju5.png" alt="">
-        <h3>Carhartt WIP x P.A.M Radio Club All Channels Tee - Black</h3>
-        <p>Rp.500.000</p>
-      </div>
-      <div class="produk-item">
-        <img src="baju6.png" alt="">
-        <h3>Thisisneverthat Rugby Shirt</h3>
-        <p>Rp.400.000</p>
-      </div>
-      <div class="produk-item">
-        <img src="baju7.png" alt="">
-        <h3>Boiler Room No Sitting T Shirt</h3>
-        <p>Rp.1.200.000</p>
-      </div>
-      <div class="produk-item">
-        <img src="baju8.png" alt="">
-        <h3>Carhartt WIP State Chromo Sweatshirt</h3>
-        <p>Rp.1.250.000</p>
-      </div>
+      <!-- dst -->
     </div>
   </section>
 
   <section id="tentang">
     <h2>About Us</h2>
-    <p><strong>Maho Store</strong> adalah sebuah online shop yang berdiri sejak Juni 2022 dan berfokus pada penyediaan pakaian streetwear, skatewear, serta aksesoris dari berbagai brand ternama dunia. Koleksi produk yang tersedia di Maho Store mencakup brand-brand populer seperti Carhartt, Noah, FA (Fucking Awesome), Dickies, dan masih banyak lagi.
-
-Dengan semangat #streetwearforever, Maho Store hadir sebagai destinasi belanja fashion yang mengutamakan kualitas dan originalitas. Toko ini beroperasi secara online melalui Instagram dan menerima pemesanan serta pertanyaan melalui WhatsApp yang tersedia di bio akun.</p>
+    <p><strong>Maho Store</strong> adalah online shop yang berdiri sejak Juni 2022 dan berfokus pada streetwear & aksesoris dari berbagai brand ternama. Melalui semangat #streetwearforever, Maho Store menjunjung kualitas & originalitas.</p>
   </section>
 
   <div class="bottom-links">
     <div>
       <h4>Store Address</h4>
-      <p><i class="fas fa-map-marker-alt"></i> Jl. Setiabudhi KM 10 NO.410 Bandung, Jawa Barat</p>
+      <p><i class="fas fa-map-marker-alt"></i> Jl. Setiabudhi KM 10 NO.410 Bandung</p>
     </div>
     <div>
       <h4>Hello Maho Friends!</h4>
       <strong>You can also order via:</strong>
       <div class="sosmed">
-        <a href="https://www.instagram.com/mahost0re" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@mahohey" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://tokopedia.com/mahost0re" target="_blank"><i class="fas fa-store"></i></a>
-        <a href="https://wa.me/6281234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/mahost0re"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@mahohey"><i class="fab fa-tiktok"></i></a>
+        <a href="https://tokopedia.com/mahost0re"><i class="fas fa-store"></i></a>
+        <a href="https://wa.me/6281234567890"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
     <div>
